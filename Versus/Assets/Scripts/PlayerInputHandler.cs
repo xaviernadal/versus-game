@@ -10,9 +10,6 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerConfiguration playerConfig;
     private Mover mover;
 
-    [SerializeField]
-    private Transform parentPlayer;
-
     private PlayerControls controls;
 
     private void Awake()
@@ -24,7 +21,9 @@ public class PlayerInputHandler : MonoBehaviour
     public void InitializePlayer(PlayerConfiguration config)
     {
         playerConfig = config;
-        config.playerMaterial.transform.SetParent(parentPlayer);
+
+        //Instantiate(config.playerMaterial.transform.parent, parentPlayer.transform);
+        //config.playerMaterial.transform.parent = parentPlayer.transform;
         config.Input.onActionTriggered += Input_onActionTriggered;
     }   
 

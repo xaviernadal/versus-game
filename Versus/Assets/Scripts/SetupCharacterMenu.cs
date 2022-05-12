@@ -18,17 +18,6 @@ public class SetupCharacterMenu : MonoBehaviour
     private Animator animations;
     
     [SerializeField]
-    private GameObject maleA;
-    [SerializeField]
-    private GameObject femaleA;
-    [SerializeField]
-    private GameObject maleB;
-    [SerializeField]
-    private GameObject police;
-    [SerializeField]
-    private GameObject zombie;
-
-    [SerializeField]
     private TextMeshProUGUI titleText;
     [SerializeField]
     private Button nextButton;
@@ -127,26 +116,8 @@ public class SetupCharacterMenu : MonoBehaviour
 
     public void Select(CallbackContext context){
         if(!inputEnabled) { return; }
-        GameObject prefabToSave = maleA;
-        switch(characterIndex){
-            case 0: 
-                prefabToSave = this.maleA;
-                break;
-            case 1:
-                prefabToSave = this.femaleA;
-                break;
-            case 2:
-                prefabToSave = this.maleB;
-                break;
-            case 3:
-                prefabToSave = this.zombie;
-                break;
-            case 4:
-                prefabToSave = this.police;
-                break;
-        }
-        
-        PlayerConfigurationManager.Instance.SetPlayerColor(playerIndex, prefabToSave);
+
+        PlayerConfigurationManager.Instance.SetPlayerColor(playerIndex, characterIndex);
         selectedText.SetActive(true);
         if (playerIndex == 1){
             selectedText2.SetActive(true);

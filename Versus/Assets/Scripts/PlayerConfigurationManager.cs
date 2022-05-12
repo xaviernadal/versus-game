@@ -77,7 +77,7 @@ public class PlayerConfigurationManager : MonoBehaviour
         return playerConfigs;
     }
 
-    public void SetPlayerColor(int index, GameObject character)
+    public void SetPlayerColor(int index, int character)
     {
         playerConfigs[index].playerMaterial = character;
         Debug.Log(playerConfigs[index].playerMaterial);
@@ -105,5 +105,5 @@ public class PlayerConfiguration
     public PlayerInput Input { get; private set; }
     public int PlayerIndex { get; private set; }
     public bool isReady { get; set; }
-    public GameObject playerMaterial {get; set;}
+    public int playerMaterial {get; set;}
 }

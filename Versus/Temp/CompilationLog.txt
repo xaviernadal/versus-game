@@ -1,2 +1,28 @@
+# Starting compiling UnityEngine.TestRunner.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-ba19edfc1af68df49b38a298752b17d0
+# Starting compiling UnityEngine.UI.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-6cde5c0a598dcb14e8224fbacf3688fe
+# Starting compiling Unity.Timeline.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-73a5a40f3906c984e9b49a5424f02e56
+# Starting compiling Unity.TextMeshPro.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-7142e7adcd27d524986a00f9d628537a
+# Starting compiling Unity.ProBuilder.Csg.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-acd45aaa15ccfc64cb3d6c37ca9d8682
+# Starting compiling Unity.InputSystem.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-ff52b7a15acf43840934cb21ec260261
+# Starting compiling Unity.ProBuilder.Poly2Tri.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-e9c5c284f86e4c74cbd5e74183e9a7f1
+# Starting compiling Unity.Polybrush.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-9f6cebffab32cb84fac31c9ca4f88575
+# Starting compiling Unity.ProBuilder.KdTree.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-1158d366c13f6f745a948d609974a479
+# Starting compiling Unity.Postprocessing.Runtime.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-8eb43d25467e10f4fad1cbdfd569b346
+# Starting compiling Unity.ProBuilder.Stl.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-db749d316f7f24548b10d8249f55a42d
+# Starting compiling Unity.ProBuilder.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-1fb45cfe3cd264b4fb102d76c0a162d8
+# Starting compiling Cinemachine.dll
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-ef1e4362159f34f4ba4a897888752a2d
 # Starting compiling Assembly-CSharp.dll
-D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-8619257e10b1c1b41a8640e478153d68
+D:\UnityEditor\2020.3.18f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-d74c141f5c784b54b8cd5362e6e5602f
