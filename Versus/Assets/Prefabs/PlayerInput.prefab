@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: bd95c405aa49f164682facd71b475368,
     type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -79,10 +79,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b6fb458c-b7f2-488f-ad7b-ab67a58f5b82
     m_ActionName: Player/Jump[/Keyboard/space,/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 924978fc-8da8-4b08-b072-a9aa34daaff8
-    m_ActionName: Player/Attack[/Keyboard/c,/Keyboard/p]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 61efec8e-7653-4f0a-a237-572b315f8b72

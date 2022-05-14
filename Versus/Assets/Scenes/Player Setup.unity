@@ -6881,7 +6881,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 5700187645404366514, guid: bd95c405aa49f164682facd71b475368,
       type: 3}
-  m_PlayerPrefab: {fileID: 5195963499166823295, guid: 84bd5d99fe5476f4fa32781f4e291cf6,
+  m_PlayerPrefab: {fileID: 828476597704025027, guid: 84bd5d99fe5476f4fa32781f4e291cf6,
     type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
@@ -13358,11 +13358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 836609318}
-  maleA: {fileID: 7478225697116208144, guid: 6fb37f825ee63264b9c2600bf1a52006, type: 3}
-  femaleA: {fileID: 6252356961377389083, guid: 2db03e7c8a8135146b280e5da7e0289c, type: 3}
-  maleB: {fileID: 7447163605589988728, guid: 907fd825e3988774caab4234b943bf44, type: 3}
-  police: {fileID: 8619338778009079851, guid: 47a3741b253f088469eedd6d403dd89a, type: 3}
-  zombie: {fileID: 856601670117699726, guid: b14953694d54eea4eb66f453e525024c, type: 3}
   titleText: {fileID: 895347853}
   nextButton: {fileID: 9208583414245006889}
   previousButton: {fileID: 9208583412643505102}

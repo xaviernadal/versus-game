@@ -9,21 +9,19 @@ public class PlayerInputHandler : MonoBehaviour
 {
     private PlayerConfiguration playerConfig;
     private Mover mover;
-
+    private ShootingGame shooter;
     private PlayerControls controls;
 
     private void Awake()
     {
         mover = GetComponent<Mover>();
         controls = new PlayerControls();
+        shooter = GetComponent<ShootingGame>();
     }
 
     public void InitializePlayer(PlayerConfiguration config)
     {
         playerConfig = config;
-
-        //Instantiate(config.playerMaterial.transform.parent, parentPlayer.transform);
-        //config.playerMaterial.transform.parent = parentPlayer.transform;
         config.Input.onActionTriggered += Input_onActionTriggered;
     }   
 
@@ -33,6 +31,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             OnMove(obj);
         }
+
     }
 
     public void OnMove(CallbackContext context)
@@ -40,5 +39,6 @@ public class PlayerInputHandler : MonoBehaviour
         if(mover != null)
             mover.SetInputVector(context.ReadValue<Vector2>());
     }
+
 
 }
