@@ -9,29 +9,42 @@ public class PlayerInputHandler : MonoBehaviour
 {
     private PlayerConfiguration playerConfig;
     private Mover mover;
-    private ShootingGame shooter;
+    private Shooter shooter;
     private PlayerControls controls;
-
+    private InputActionAsset inputAsset;
+    private InputActionMap shootingGame;
+    private PlayerInput playerInput;
+    private bool alreadyShot = false;
     private void Awake()
     {
+        playerInput = GetComponent<PlayerInput>();
+        inputAsset = this.GetComponent<PlayerInput>().actions;
+        shootingGame = inputAsset.FindActionMap("Shooting");
         mover = GetComponent<Mover>();
         controls = new PlayerControls();
-        shooter = GetComponent<ShootingGame>();
+        shooter = GetComponent<Shooter>();
+
     }
 
     public void InitializePlayer(PlayerConfiguration config)
     {
         playerConfig = config;
-        config.Input.onActionTriggered += Input_onActionTriggered;
     }   
 
-    private void Input_onActionTriggered(CallbackContext obj)
-    {
-        if (obj.action.name == controls.Player.Movement.name)
-        {
-            OnMove(obj);
-        }
+    private void Update(){
 
+    }   
+    private void OnEnable(){
+        
+        
+        //
+        //Debug.Log(!string.IsNullOrEmpty(input));
+        shootingGame.FindAction("Shoot").started += DoShoot;
+        shootingGame.Enable();
+    }
+    private void OnDisable(){
+        shootingGame.FindAction("Shoot").started -= DoShoot;
+        shootingGame.Disable();
     }
 
     public void OnMove(CallbackContext context)
@@ -40,5 +53,11 @@ public class PlayerInputHandler : MonoBehaviour
             mover.SetInputVector(context.ReadValue<Vector2>());
     }
 
-
+    public void DoShoot(CallbackContext context){
+        if(!alreadyShot)
+            if(shooter != null){
+                shooter.SetShot(context.control.device.ToString());
+                alreadyShot = true;
+            }
+    }
 }

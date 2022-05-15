@@ -80,8 +80,6 @@ public class PlayerConfigurationManager : MonoBehaviour
     public void SetPlayerColor(int index, int character)
     {
         playerConfigs[index].playerMaterial = character;
-        Debug.Log(playerConfigs[index].playerMaterial);
-        Debug.Log(playerConfigs[index]);
     }
 
     public void ReadyPlayer(int index)

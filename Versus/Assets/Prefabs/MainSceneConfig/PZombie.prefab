@@ -98,8 +98,8 @@ GameObject:
   - component: {fileID: 8699046864421384309}
   - component: {fileID: 5735537033872573345}
   - component: {fileID: 661216592776019256}
-  - component: {fileID: 4136257686789789355}
   - component: {fileID: 627502029524205203}
+  - component: {fileID: -3853440950394074825}
   m_Layer: 0
   m_Name: PZombie
   m_TagString: Untagged
@@ -226,18 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fea3fab24877bb4d8c136a55bf128c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4136257686789789355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550382640613563552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67682386f95ecdb438d721780144d87b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &627502029524205203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +257,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-3853440950394074825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550382640613563552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289dbd774f07a7b42aeac5073bb2649d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4843835184224535040
 GameObject:
   m_ObjectHideFlags: 0

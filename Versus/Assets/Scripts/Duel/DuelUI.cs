@@ -24,11 +24,11 @@ public class DuelUI : MonoBehaviour
 
     private void showControlTexts(PlayerConfiguration[] playerConfigs){
         if (playerConfigs[0].Input.devices[0].ToString() == "Keyboard:/Left"){
-            playerControls[0].SetText("Spacebar");
-            playerControls[1].SetText("Enter");
+            playerControls[0].SetText("Press C");
+            playerControls[1].SetText("Press N");
         } else {
-            playerControls[1].SetText("Spacebar");
-            playerControls[0].SetText("Enter");
+            playerControls[1].SetText("Press N");
+            playerControls[0].SetText("Press C");
         }
     }
     // Update is called once per frame

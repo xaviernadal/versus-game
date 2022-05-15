@@ -8972,6 +8972,8 @@ MonoBehaviour:
       remapped: 1
     - original: 38
       remapped: 38
+    - original: 17
+      remapped: 17
   - name: Right
     routes:
     - original: 15
@@ -8982,6 +8984,8 @@ MonoBehaviour:
       remapped: 2
     - original: 38
       remapped: 27
+    - original: 17
+      remapped: 28
 --- !u!1 &698919750
 GameObject:
   m_ObjectHideFlags: 3

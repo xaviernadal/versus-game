@@ -57,7 +57,52 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 941c04f4-10b9-4634-aa86-6f670b62eec9
+    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b6fb458c-b7f2-488f-ad7b-ab67a58f5b82
+    m_ActionName: Player/Select[/Keyboard/space,/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 61efec8e-7653-4f0a-a237-572b315f8b72
+    m_ActionName: Selection/Next[/Keyboard/rightArrow,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a67847d2-6778-4f4e-8dca-789f46d36ed4
+    m_ActionName: Selection/Previous[/Keyboard/leftArrow,/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dfc76530-974d-496c-b28c-fdb1df9e1ba4
+    m_ActionName: Selection/Select[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8d10422b-7104-4d5e-9d62-e51a77748fb0
+    m_ActionName: Selection/Join[/Keyboard/x]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4729322478461765082, guid: 3819f97b1c7008a45a01ea1a6ce56a64,
+          type: 3}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fe5bd037-0fb1-49e9-ba45-6d2443669259
+    m_ActionName: Shooting/Shoot[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b6f9305a-bf6d-4fa1-be3e-92a589baa3c7
+    m_ActionName: Shooting/ShootP2[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Selection

@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 6423874990651502393}
   - component: {fileID: 7677652600380343000}
   - component: {fileID: 6506259848979507467}
-  - component: {fileID: -1768774188578115392}
   - component: {fileID: -6393205463952725280}
+  - component: {fileID: -8468128064102559108}
   m_Layer: 0
   m_Name: PPolice
   m_TagString: Untagged
@@ -144,18 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fea3fab24877bb4d8c136a55bf128c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1768774188578115392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9091397422616917456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67682386f95ecdb438d721780144d87b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-6393205463952725280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +175,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-8468128064102559108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091397422616917456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289dbd774f07a7b42aeac5073bb2649d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6928346323624307934
 PrefabInstance:
   m_ObjectHideFlags: 0
