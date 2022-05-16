@@ -327,7 +327,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ShootP2"",
+                    ""name"": ""PlayAgain"",
                     ""type"": ""Button"",
                     ""id"": ""b6f9305a-bf6d-4fa1-be3e-92a589baa3c7"",
                     ""expectedControlType"": ""Button"",
@@ -351,11 +351,11 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7802c747-aad5-4097-a0eb-c3410a9be8fa"",
-                    ""path"": ""<Keyboard>/enter"",
+                    ""path"": ""<Keyboard>/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard1"",
-                    ""action"": ""ShootP2"",
+                    ""action"": ""PlayAgain"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -411,7 +411,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         // Shooting
         m_Shooting = asset.FindActionMap("Shooting", throwIfNotFound: true);
         m_Shooting_Shoot = m_Shooting.FindAction("Shoot", throwIfNotFound: true);
-        m_Shooting_ShootP2 = m_Shooting.FindAction("ShootP2", throwIfNotFound: true);
+        m_Shooting_PlayAgain = m_Shooting.FindAction("PlayAgain", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -570,13 +570,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Shooting;
     private IShootingActions m_ShootingActionsCallbackInterface;
     private readonly InputAction m_Shooting_Shoot;
-    private readonly InputAction m_Shooting_ShootP2;
+    private readonly InputAction m_Shooting_PlayAgain;
     public struct ShootingActions
     {
         private @PlayerControls m_Wrapper;
         public ShootingActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Shoot => m_Wrapper.m_Shooting_Shoot;
-        public InputAction @ShootP2 => m_Wrapper.m_Shooting_ShootP2;
+        public InputAction @PlayAgain => m_Wrapper.m_Shooting_PlayAgain;
         public InputActionMap Get() { return m_Wrapper.m_Shooting; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -589,9 +589,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Shoot.started -= m_Wrapper.m_ShootingActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_ShootingActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_ShootingActionsCallbackInterface.OnShoot;
-                @ShootP2.started -= m_Wrapper.m_ShootingActionsCallbackInterface.OnShootP2;
-                @ShootP2.performed -= m_Wrapper.m_ShootingActionsCallbackInterface.OnShootP2;
-                @ShootP2.canceled -= m_Wrapper.m_ShootingActionsCallbackInterface.OnShootP2;
+                @PlayAgain.started -= m_Wrapper.m_ShootingActionsCallbackInterface.OnPlayAgain;
+                @PlayAgain.performed -= m_Wrapper.m_ShootingActionsCallbackInterface.OnPlayAgain;
+                @PlayAgain.canceled -= m_Wrapper.m_ShootingActionsCallbackInterface.OnPlayAgain;
             }
             m_Wrapper.m_ShootingActionsCallbackInterface = instance;
             if (instance != null)
@@ -599,9 +599,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
-                @ShootP2.started += instance.OnShootP2;
-                @ShootP2.performed += instance.OnShootP2;
-                @ShootP2.canceled += instance.OnShootP2;
+                @PlayAgain.started += instance.OnPlayAgain;
+                @PlayAgain.performed += instance.OnPlayAgain;
+                @PlayAgain.canceled += instance.OnPlayAgain;
             }
         }
     }
@@ -648,6 +648,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     public interface IShootingActions
     {
         void OnShoot(InputAction.CallbackContext context);
-        void OnShootP2(InputAction.CallbackContext context);
+        void OnPlayAgain(InputAction.CallbackContext context);
     }
 }

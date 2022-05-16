@@ -87,7 +87,7 @@ public class PlayerConfigurationManager : MonoBehaviour
         playerConfigs[index].isReady = true;
         if (playerConfigs.Count == MaxPlayers && playerConfigs.All(p => p.isReady == true))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("ShootingGame");
         }
     }
 }
@@ -98,10 +98,12 @@ public class PlayerConfiguration
     {
         PlayerIndex = pi.playerIndex;
         Input = pi;
+        pointsCount = 0;
     }
 
     public PlayerInput Input { get; private set; }
     public int PlayerIndex { get; private set; }
     public bool isReady { get; set; }
     public int playerMaterial {get; set;}
+    public int pointsCount {get; set;}
 }

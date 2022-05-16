@@ -12,13 +12,14 @@ public class Shooter : MonoBehaviour
     private float startTime;
     private ShowEarlyMessage showMessage;
     private PlayerConfiguration[] playerConfigs;
+    private FinalPanelHandler finalPanel;
     // Start is called before the first frame update
     private void Awake() {
+        finalPanel = FindObjectOfType<FinalPanelHandler>();
         showMessage = FindObjectOfType<ShowEarlyMessage>();
         animator = this.GetComponent<Animator>();
         players = FindObjectsOfType<Shooter>();
         playerConfigs = PlayerConfigurationManager.Instance.GetPlayerConfigs().ToArray();
-        Debug.Log("Aqui" + showMessage);
     }
     void Start(){
        startTime = Time.time;
@@ -51,27 +52,43 @@ public class Shooter : MonoBehaviour
         if(playerConfigs[0].Input.devices[0].ToString() == keyboardLeft){
             if (device == keyboardLeft) {
                 players[1].animator.SetTrigger("Death");
+                SetFinalPanel(1);
             } else {
                 players[0].animator.SetTrigger("Death");
+                SetFinalPanel(0);
             }
         } else {
             if (device == keyboardLeft) {
                 players[1].animator.SetTrigger("Death");
+                SetFinalPanel(1);
             } else {
                 players[0].animator.SetTrigger("Death");
+                SetFinalPanel(0);
             }
         }
         if(showMessage != null)
             showMessage.SetShotBeforeTime();
-
+            
         return false;
     }
     private void LeftShoots(){
         players[1].animator.SetTrigger("Shoot");
         players[0].animator.SetTrigger("Death");
+        SetFinalPanel(0);
     }
     private void RightShoots(){
         players[0].animator.SetTrigger("Shoot");
         players[1].animator.SetTrigger("Death");
+        SetFinalPanel(1);
+    }
+
+    private void SetFinalPanel(int index){
+        StartCoroutine(WaitForPanel(index));
+       
+    }
+    IEnumerator WaitForPanel(int index){
+        yield return new WaitForSeconds(2);
+         if(finalPanel != null)
+            finalPanel.SetCompletePanel(index);
     }
 }

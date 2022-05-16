@@ -1,26 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShowEarlyMessage : MonoBehaviour
 {
     [SerializeField]
-    private GameObject earlyMessage;
+    private TextMeshProUGUI earlyMessage;
 
-    private bool shotBeforeTime = false;
-    void Start()
-    {
-        earlyMessage.SetActive(false);
+    void Start(){
+        earlyMessage.SetText("");
     }
+
     public void SetShotBeforeTime(){
-        shotBeforeTime = true;
+        earlyMessage.SetText("Too soon! You lose!");
+        StartCoroutine(Delay());
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(shotBeforeTime){
-            earlyMessage.SetActive(true);
-        }
+    IEnumerator Delay(){
+        yield return new WaitForSeconds(3);
+        earlyMessage.SetText("");
     }
 }

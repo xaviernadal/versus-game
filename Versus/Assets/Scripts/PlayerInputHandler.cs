@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -35,15 +36,13 @@ public class PlayerInputHandler : MonoBehaviour
 
     }   
     private void OnEnable(){
-        
-        
-        //
-        //Debug.Log(!string.IsNullOrEmpty(input));
         shootingGame.FindAction("Shoot").started += DoShoot;
+        shootingGame.FindAction("PlayAgain").started += DoPlayAgain;
         shootingGame.Enable();
     }
     private void OnDisable(){
         shootingGame.FindAction("Shoot").started -= DoShoot;
+        shootingGame.FindAction("PlayAgain").started -= DoPlayAgain;
         shootingGame.Disable();
     }
 
@@ -59,5 +58,8 @@ public class PlayerInputHandler : MonoBehaviour
                 shooter.SetShot(context.control.device.ToString());
                 alreadyShot = true;
             }
+    }
+    public void DoPlayAgain(CallbackContext context){
+        SceneManager.LoadScene("ShootingGame");
     }
 }
