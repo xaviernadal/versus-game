@@ -60,6 +60,12 @@ public class PlayerInputHandler : MonoBehaviour
             }
     }
     public void DoPlayAgain(CallbackContext context){
+        StartCoroutine(WaitForAudio());
+
+    }
+    IEnumerator WaitForAudio(){
+        FindObjectOfType<AudioManager>().Play("PlayAgain");
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("ShootingGame");
     }
 }

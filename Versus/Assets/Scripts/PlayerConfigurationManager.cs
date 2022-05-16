@@ -55,9 +55,11 @@ public class PlayerConfigurationManager : MonoBehaviour
     }
     public void HidePlayerPanel(PlayerInput pi){
         if(pi.devices[0].ToString() == "Keyboard:/Left"){
+            FindObjectOfType<AudioManager>().Play("Join");
             player1Panel.SetActive(false);
         }
         if(pi.devices[0].ToString() == "Keyboard:/Right"){
+        FindObjectOfType<AudioManager>().Play("Join");
             player2Panel.SetActive(false);
         }
     }

@@ -25,6 +25,8 @@ public class FinalPanelHandler : MonoBehaviour
     }
 
     public void SetCompletePanel(int indexMessage){
+        FindObjectOfType<AudioManager>().Stop("Theme");
+        FindObjectOfType<AudioManager>().Play("EndingScreen");
         SetModels();
         SetPanel();
         SetWinnerMessage(indexMessage);

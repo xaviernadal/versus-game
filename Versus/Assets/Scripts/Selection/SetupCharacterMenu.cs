@@ -88,6 +88,7 @@ public class SetupCharacterMenu : MonoBehaviour
         characterIndex = checkIndex(characterIndex);
         nextButton.Select();
         animations.SetTrigger("Next");
+        FindObjectOfType<AudioManager>().Play("Swoosh");
     }
 
     public void Previous(CallbackContext context){
@@ -97,6 +98,7 @@ public class SetupCharacterMenu : MonoBehaviour
         characterIndex = checkIndex(characterIndex);
         previousButton.Select();
         animations.SetTrigger("Previous");
+        FindObjectOfType<AudioManager>().Play("Swoosh");
     }
     public int checkIndex(int characterIndex){
         if(characterIndex > 4) {
@@ -116,6 +118,7 @@ public class SetupCharacterMenu : MonoBehaviour
 
     public void Select(CallbackContext context){
         if(!inputEnabled) { return; }
+        FindObjectOfType<AudioManager>().Play("Select");
 
         PlayerConfigurationManager.Instance.SetPlayerColor(playerIndex, characterIndex);
         selectedText.SetActive(true);
